@@ -1,3 +1,20 @@
+# Repro for ElderJS + Sanity compatibility issue
+
+I used the [ElderJS template](https://github.com/Elderjs/template/) as a base, installed `@sanity/client` and imported it from a Svelte component, `src/routes/home/Home.svelte`.
+
+### Instructions
+
+1. clone
+2. `pnpm install` / `npm install` / `yarn install`
+3. npm start
+4. Open browser at `localhost:3000`
+5. Your terminal should show this error:
+
+```
+TypeError [ERR_INVALID_ARG_TYPE]: The "superCtor" argument must be of type Function. Received type undefined
+      at Object.inherits (util.js:146:11)
+```
+
 # Elder.js Template Project
 
 <img src="https://img.shields.io/badge/dynamic/json?color=brightgreen&label=Node&query=engines.node&url=https%3A%2F%2Fraw.githubusercontent.com%2Felderjs%2Ftemplate%2Fmaster%2Fpackage.json" alt="node version" />
