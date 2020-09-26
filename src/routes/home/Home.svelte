@@ -1,11 +1,13 @@
 <script>
-  import { client } from '../../serializers.js';
+  import client from '@sanity/client';
   import HookDetail from '../../components/HookDetail.svelte';
   import BlogTeaser from '../../components/BlogTeaser.svelte';
   import Clock from '../../components/Clock.svelte';
   export let data, helpers;
 
   export let foo;
+
+  console.log('client?', client);
 
   // add permalinks to the hook list so we can link to the posts.
   const hooks = data.hookInterface.map((hook) => ({ ...hook, link: helpers.permalinks.hooks({ slug: hook.hook }) }));
